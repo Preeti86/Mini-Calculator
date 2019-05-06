@@ -15,5 +15,14 @@ Challenge
 3. The application should be a web app written in React.
 4. The app should be responsive and change according to brower width/height.
 
+Solution
+
+1. Used create-react-app to create the app and CSS for styling.
+2. I have used ES6 class method and ReactDom to mount my application to the index.html file with ReactDOM.render(). 
+
+User story
+
+1. User can fill in all the three input field and get the output desired which is either by clicking addition or multiplation radio buttons.
+2. The app is responsive in nature can be used in mobile, tablets and laptop. 
 
 
