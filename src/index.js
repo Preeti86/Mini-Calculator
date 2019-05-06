@@ -13,6 +13,8 @@ class Calculator extends React.Component{
             value1Error: '',
             value2Error: '',
             value3Error: ''
+
+
         };
     }
     handleChange = event => {
@@ -55,15 +57,17 @@ class Calculator extends React.Component{
                 value3.length > 3 ? null : 'Name must be longer than 3 characters'
         });
     };
-
+/*
     handleClicked = event => {
         event.preventDefault();
         const { value1,value2,value3 } = this.state;
-        alert(`Your state values: \n 
+       /* alert(`Your state values: \n
             value1: ${value1} \n 
             value2: ${value2} \n 
             value3: ${value3}`);
-    };
+    };*/
+
+
     render(){
         let intA,intB,intC,intD;
         return(
@@ -124,4 +128,3 @@ ReactDOM.render(
     <Calculator/>,
     document.getElementById('root')
 );
-
