@@ -14,7 +14,7 @@ class Calculator extends React.Component{
     }
         handleChange = event => {
             let { value } = event.target;
-            value = Math.max(Number(min), Math.min(Number(max), Number(value)));
+            
 
             this.setState({ value });
 
