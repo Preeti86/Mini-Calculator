@@ -10,11 +10,16 @@ class Calculator extends React.Component{
         this.state = {
             value: null,
             output: "",
+
+
         };
     }
+
+
     render(){
         let intA,intB,intC,intD;
         return(
+             <form>
             <div className="superContainer">
                 <div className="header">
                     <header>
@@ -35,7 +40,7 @@ class Calculator extends React.Component{
 
                     <div className="box3">
                         <label>Value 3</label> <br/>
-                        <input placeholder="Value 3" type="text" ref="Value3"  />
+                        <input placeholder="Value 3" type="text" id="value3" ref="Value3"  />
                     </div>
 
                     <div className="box4">
@@ -62,6 +67,7 @@ class Calculator extends React.Component{
                     </div>
                 </div>
             </div>
+             </form>
         );
     };
 }
