@@ -69,7 +69,6 @@ class Calculator extends React.Component{
     render(){
         let intA,intB,intC,intD;
         return(
-             <form>
             <div className="superContainer">
                 <div className="header">
                     <header>
@@ -117,7 +116,6 @@ class Calculator extends React.Component{
                     </div>
                 </div>
             </div>
-             </form>
         );
     };
 }
