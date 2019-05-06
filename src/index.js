@@ -10,20 +10,64 @@ class Calculator extends React.Component{
         this.state = {
             value: null,
             output: "",
+            value1Error: '',
+            value2Error: '',
+            value3Error: ''
         };
     }
-        handleChange = event => {
-            let { value } = event.target;
-            
+    handleChange = event => {
+           this.setState({ value1:
+           event.target.value },() => {
+               this.validatevalue1();
+           });
+    };
+    handleChange = event => {
+        this.setState({ value2:
+            event.target.value },() => {
+            this.validatevalue2();
+        });
+    };
+    handleChange = event => {
+        this.setState({ value3:
+            event.target.value },() => {
+            this.validatevalue3();
+        });
+    };
 
-            this.setState({ value });
+    validatevalue1 = () => {
+        const { value1 } = this.state;
+        this.setState({
+            value1Error:
+                value1.length > 3 ? null : 'Name must be longer than 3 characters'
+        });
+    };
+    validatevalue2 = () => {
+        const { value2 } = this.state;
+        this.setState({
+            value2Error:
+                value2.length > 3 ? null : 'Name must be longer than 3 characters'
+        });
+    };
+    validatevalue3 = () => {
+        const { value3 } = this.state;
+        this.setState({
+            value3Error:
+                value3.length > 3 ? null : 'Name must be longer than 3 characters'
+        });
+    };
 
-
-    }
-
+    handleClicked = event => {
+        event.preventDefault();
+        const { value1,value2,value3 } = this.state;
+        alert(`Your state values: \n 
+            value1: ${value1} \n 
+            value2: ${value2} \n 
+            value3: ${value3}`);
+    };
     render(){
         let intA,intB,intC,intD;
         return(
+             <form>
             <div className="superContainer">
                 <div className="header">
                     <header>
@@ -33,18 +77,18 @@ class Calculator extends React.Component{
                 <div className="container">
                     <div className="box1">
                         <label>Value 1</label> <br/>
-                        <input placeholder="Value 1" type="text" value={this.state.value} onChange={this.handleChange} ref="Value1"/>
+                        <input placeholder="Value 1" type="text" id="value1" value={this.state.value1} onChange={this.handleChange} ref="Value1"/>
                     </div>
 
                     <div className="box2">
                         <label >Value 2</label> <br/>
-                        <input placeholder="Value 2" type="text" value={this.state.value} onChange={this.handleChange} ref="Value2" />
+                        <input placeholder="Value 2" type="text" id="value2" value={this.state.value2} onChange={this.handleChange} ref="Value2" />
                     </div>
 
 
                     <div className="box3">
                         <label>Value 3</label> <br/>
-                        <input placeholder="Value 3" type="text" value={this.state.value} onChange={this.handleChange}  ref="Value3"  />
+                        <input placeholder="Value 3" type="text" id="value3" value={this.state.value3} onChange={this.handleChange}  ref="Value3"  />
                     </div>
 
                     <div className="box4">
@@ -71,7 +115,7 @@ class Calculator extends React.Component{
                     </div>
                 </div>
             </div>
-
+             </form>
         );
     };
 }
