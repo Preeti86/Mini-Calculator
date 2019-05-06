@@ -13,8 +13,6 @@ class Calculator extends React.Component{
             value1Error: '',
             value2Error: '',
             value3Error: ''
-
-
         };
     }
     handleChange = event => {
