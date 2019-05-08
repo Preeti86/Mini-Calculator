@@ -76,7 +76,6 @@ input[type=text], select {
 }
 
 /*responsive media quaries*/
-
 @media screen and (max-width:1200px){
     .box1, .box2, .box3, .box4 {
         width: 40%;
@@ -130,13 +129,10 @@ input[type=text], select {
 
     }
 
-    .box2 {
+    .box2,.box3 {
         margin-left: 50px;
     }
-
-    .box3 {
-        margin-left: 50px;
-    }
+    
     .container {
         height: 68em;
     }
