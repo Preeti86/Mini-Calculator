@@ -34,7 +34,7 @@ class Calculator extends React.Component{
 
                     <div className="box3">
                         <label>Value 3</label> <br/>
-                        <input placeholder="Value 3" type="text" id="value3" ref="Value3"  />
+                        <input placeholder="Value 3" type="text" ref="Value3"  />
                     </div>
 
                     <div className="box4">
